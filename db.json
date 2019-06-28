@@ -1,12 +1,6 @@
 {
   "toys": [
     {
-<<<<<<< HEAD
-      "name": "pizzarte",
-      "image": "https://vignette.wikia.nocookie.net/p__/images/5/54/812.png/revision/latest?cb=20180122171229&path-prefix=protagonist",
-      "likes": 0,
-      "id": 1
-=======
       "id": 1,
       "name": "Woody",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png",
@@ -16,7 +10,7 @@
       "id": 2,
       "name": "Buzz Lightyear",
       "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
-      "likes": 8
+      "likes": 10
     },
     {
       "id": 3,
@@ -136,7 +130,6 @@
       "image": "https://vignette.wikia.nocookie.net/pixar/images/7/7e/0AD44E98-A7C1-4F8F-9C68-7F3D26A48DD1.png/revision/latest/scale-to-width-down/310?cb=20190518011312",
       "likes": 0,
       "id": 24
->>>>>>> 445060c6d56f09f8960376ba766efbce1ac3d442
     }
   ]
 }

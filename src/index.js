@@ -11,7 +11,7 @@ function slapOneCardToTheDOM(toyCollection, toyData) {
   toyCard.innerHTML = `
     <h2>${toyData.name}</h2>
     <img src="${toyData.image}" class="toy-avatar" />
-    <p> ${toyData.likes} Likes </p>
+    <p id="likes"> ${toyData.likes} Likes </p>
     <button class ="like-btn"> Like <3 </button>
     <button class ="delete-btn"> Delete </button>
   `
@@ -48,7 +48,20 @@ function deleteToy(event) {
   })
 }
 
-// function likeToy
+function likeToy(event) {
+  let id = event.target.parentElement.id;
+  let likes = parseInt(event.target.parentElement.querySelector('#likes').innerHTML)
+  likes +=1
+  //
+  fetch(`http://localhost:3000/toys/${id}`, {
+    method: "PATCH",
+    headers: {
+      "content-Type": "application/json"
+    },
+    body: JSON.stringify({"likes": likes})
+  }).then(res => res.json())
+  .then(data => event.target.parentElement.querySelector('#likes').innerHTML = `${data.likes} Likes`
+)}
 
 document.addEventListener("DOMContentLoaded", function(){
   allToys();
